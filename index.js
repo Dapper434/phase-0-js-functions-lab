@@ -1,28 +1,23 @@
 function calculateTax(amount) {
   return amount * 0.10;
 }
-
-
 function convertToUpperCase(text) {
   return text.toUpperCase();
 }
-
-
 function findMaximum(num1, num2) {
-
   return Math.max(num1, num2);
 }
-
-
-function calculateDiscountedPrice(originalPrice, discountPercentage) {
-  let discountAmount = originalPrice * (discountPercentage / 100);
+function isPalindrome(word) {
   
-   return originalPrice - discountAmount;
+  const lowerCaseWord = word.toLowerCase();
+  
+  
+  const reversedWord = lowerCaseWord.split('').reverse().join('');
+  
+  
+  return lowerCaseWord === reversedWord;
 }
-
-console.log("Tax on $50:", calculateTax(50)); 
-console.log("Uppercase:", convertToUpperCase("javascript is powerful")); 
-console.log("Max number:", findMaximum(150, 42)); 
- 
- 
-module.exports = { calculateTax, convertToUpperCase, findMaximum, isPalindrome, calculateDiscountedPrice };
+function calculateDiscountedPrice(originalPrice, discountPercentage) {
+  const discountAmount = originalPrice * (discountPercentage / 100);
+  return originalPrice - discountAmount;
+}
